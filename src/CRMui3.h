@@ -124,7 +124,7 @@ class CRMui3 {
     void apiResponse(const String &p, const String &v);
 
     String var(const String &name);
-    bool isVarExists(const String &name)
+    bool isVarExists(const String &name);
     void var(const String &name, const String &value, bool save = true);
     void var(const String &name, float, bool save = true);
     void var(const String &name, double, bool save = true);
