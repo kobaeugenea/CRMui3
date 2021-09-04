@@ -37,12 +37,12 @@ void CRMui3::begin(const String &app_name, void (*uiFunction)(), void (*updateFu
   if (apiFunction != NULL) api = apiFunction;
   else _apiStatus = false;
   _app_name = app_name;
-  getID();
   cfgLoad();
-  http();
   #ifndef USE_CUSTOM_WIFI_SETTINGS
+  getID();
   wifiStart();
   #endif
+  http();
   server.begin();
   if (_updateStatus) upd();
   #ifndef USE_CUSTOM_OTA
