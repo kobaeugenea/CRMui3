@@ -82,6 +82,10 @@ String CRMui3::var(const String &name) {
   return cfg[name];
 }
 
+bool CRMui3::isVarExists(const String &name) {
+  return cfg.containsKey(name);
+}
+
 void CRMui3::var(const String &name, const String &value, bool save) {
   cfg[name] = value;
   var_auto_save(save);
